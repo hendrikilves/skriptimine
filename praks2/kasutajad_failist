@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#
+echo "Sisesta failinimi kus asuvad kasutajate nimed: "
+read failinimi
+
+for i in `more $failinimi`
+do
+sh ./lisa_kasutaja $i
+echo "Lisatud kasutajad:"
+echo $i
+done
