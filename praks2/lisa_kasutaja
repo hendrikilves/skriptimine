@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+#
+#
+useradd $1 -m -s /bin/bash
+ls -la /home/$1
