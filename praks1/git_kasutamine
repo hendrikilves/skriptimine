@@ -19,3 +19,19 @@ cd skriptimine
 d)tekita lokaalne repositoorium git systeemi jaoks antud kaustas
 git init
 
+#Loon uue kausta praktikumi jaoks
+mkdir praksX
+
+#teen skripti
+nano failinimi
+
+#kontrollin kas töötab 
+./failinimi
+
+#kirjeldan mida fail/faili muudatus teeb
+git add failinimi
+git commit -m "faili muudatuse kirjeldus"
+
+#lükkan muudatused github'i
+git push -uf github master
+
