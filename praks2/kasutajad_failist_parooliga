@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo " "
+echo "sisesta faili nimi, kus asuvad kasutajad ja paroolid formaadis kasutaja:parool "
+echo " "
+read failinimi
+
+for i in `more $failinimi`
+do
+kasutaja=`echo $i | cut -d \: -f 1`
+parool=`echo $i | cut -d \: -f 2`
+sh ./lisa_kasutaja $kasutaja
+echo $kasutaja:$parool | chpasswd
+echo "loodud" $kasutaja "parooliga" $parool
+done
